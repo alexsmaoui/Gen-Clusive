@@ -5,7 +5,6 @@ const fs = require("fs");
 const moment = require("moment");
 const chalk = require("chalk");
 const config = require("./config.json");
-const token = config.token;
 const log = message => {
     console.log(`[${moment().format('DD/MM/YY HH:mm:ss')}] ${message}`);
 };
