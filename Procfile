@@ -1,1 +1,1 @@
-worker: node bot.js in it
+worker: node bot.js
