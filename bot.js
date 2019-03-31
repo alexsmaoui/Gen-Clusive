@@ -75,7 +75,7 @@ bot.once("ready", function() {
 });
 
 try {
-    bot.login(token);
+    bot.login(process.env.TOKENN);
 } catch (error) {
     log("Invalid token provided.");
 };
