@@ -5,8 +5,9 @@ module.exports.run = async (bot, message, args) => {
            message.guild.members.forEach( member => {
                member.send(message.content.substr(3));
 message.delete();
-           }
+           })
         }
+                                         
            
 
         
