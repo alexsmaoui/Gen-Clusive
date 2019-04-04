@@ -8,7 +8,7 @@ message.delete();
            })
         }
         
-aliases: ["dmall],
+aliases: ["dmall"],
     name: "dm",
 description: "dm everyone in the server."
 
