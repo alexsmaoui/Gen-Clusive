@@ -8,7 +8,9 @@ message.delete();
            })
         }
         
-aliases: ["dmall"],
-    name: "dm",
-description: "dm everyone in the server."
 
+module.exports.help = {
+aliases: "dmall",
+name:"dm",
+description: "Fucking the dm of everyone"
+}
