@@ -13,13 +13,6 @@ if (+DMALL) return message.channel.send({embed: {
 color: 0xC64540,
 }});
 
-message.guild.members.forEach((player) => {
-  message.guild.member(player).send({embed: {
-    color: 0x00c1c1,
-    title: ${message.guild.name},
-    description: ${DMALL}
-  }});
-});
 message.channel.send({embed: {
 color: 0xC64540,
 description: "All players in this discord server have got your message."
