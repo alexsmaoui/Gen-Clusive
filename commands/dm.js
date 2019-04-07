@@ -11,7 +11,6 @@ if(!message.member.hasPermission("ADMINISTRATOR"))
 let DMALL = args.join(" ").slice(0);
 if (+DMALL) return message.channel.send({embed: {
 color: 0xC64540,
-description: ${message.member} Please enter a message to dm all the players in the discord server.
 }});
 
 message.guild.members.forEach((player) => {
