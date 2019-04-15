@@ -5,5 +5,5 @@ module.exports = {
     },
     aliases: ["dmall", "adv"],
     name: "dm",
-    description: "DM everyone something."
+    description: "DM Everyone Something."
 };
