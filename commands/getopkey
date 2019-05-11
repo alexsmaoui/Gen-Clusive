@@ -9,7 +9,7 @@ module.exports = {
 
         if (message.channel.name !== "op-gen") return message.channel.send(new discord.RichEmbed()
             .setTitle(`Stop!`)
-            .setDescription(`**You need to use the correct channel (<#${message.guild.channels.find(channel => channel.name === "op-gen").id}>).**`)
+            .setDescription(`**You need to use the correct channel (<#${message.guild.channels.find(channel => channel.name === "premium-gen").id}>).**`)
             .setColor(0xff0000));
         if (!message.member.roles.has(message.guild.roles.find(role => role.name === "Gen Access").id)) return message.channel.send(new discord.RichEmbed()
             .setTitle(`Stop!`)
@@ -24,7 +24,7 @@ module.exports = {
             .setTitle(`Stop!`)
             .setDescription(`**You need to wait \`${ms(bot.data.get(message.author.id).num)}\` before using this again.**`)
             .setColor(0xff0000));
-        bot.data.set(message.author.id, { num: 120000 });
+        bot.data.set(message.author.id, { num: 180000 });
         message.channel.send(new discord.RichEmbed()
             .setTitle(`Check your DMs.`)
             .setDescription(`**You were sent a \`${item.type}\` key.**`)
@@ -38,7 +38,7 @@ module.exports = {
             if (bot.data.get(message.author.id) > 0) bot.data.set(message.author.id, { ...newNum });
         }, 1)
     },
-    aliases: ["getopkey", "freeopkey", "giveopkey"],
+     aliases: ["getopkey", "freeopkey", "giveopkey"],
     name: "opkey",
     description: "Claim A OP Key From The OP Gen."
 };
