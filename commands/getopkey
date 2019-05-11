@@ -38,7 +38,7 @@ module.exports = {
             if (bot.data.get(message.author.id) > 0) bot.data.set(message.author.id, { ...newNum });
         }, 1)
     },
-     aliases: ["getopkey", "freeopkey", "giveopkey"],
+    aliases: ["getopkey", "freeopkey", "giveopkey"],
     name: "opkey",
     description: "Claim A OP Key From The OP Gen."
 };
