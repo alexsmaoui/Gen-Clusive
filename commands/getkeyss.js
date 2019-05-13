@@ -7,13 +7,13 @@ module.exports = {
         const items = JSON.parse(fs.readFileSync(`${__dirname}/../items.json`, "utf8"));
         const item = items[Math.round(Math.random() * (items.length - 1))];
 
-        if (message.channel.name !== "premium-gen") return message.channel.send(new discord.RichEmbed()
+        if (message.channel.name !== "gen") return message.channel.send(new discord.RichEmbed()
             .setTitle(`Stop!`)
-            .setDescription(`**You need to use the correct channel (<#${message.guild.channels.find(channel => channel.name === "premium-gen").id}>).**`)
+            .setDescription(`**You need to use the correct channel (<#${message.guild.channels.find(channel => channel.name === "op-gen").id}>).**`)
             .setColor(0xff0000));
         if (!message.member.roles.has(message.guild.roles.find(role => role.name === "Premium Gen Access").id)) return message.channel.send(new discord.RichEmbed()
             .setTitle(`Stop!`)
-            .setDescription(`**You need to have the "Premium Gen Access" role.**`)
+            .setDescription(`**You need to have the "Op Gen Access" role.**`)
             .setColor(0xff0000));
         if (items.length <= 0) return message.channel.send(new discord.RichEmbed()
             .setAuthor(message.author.username, message.author.avatarURL)
@@ -38,7 +38,7 @@ module.exports = {
             if (bot.data.get(message.author.id) > 0) bot.data.set(message.author.id, { ...newNum });
         }, 1)
     },
-    aliases: ["getpkey", "freepkey", "givepkey"],
-    name: "pkey",
-    description: "Claim A Premium Key From The Premium Gen."
+    aliases: ["getopkey", "freeopkey", "giveopkey"],
+    name: "opkey",
+    description: "Claim A OP Key From The OP Gen."
 };
