@@ -11,7 +11,7 @@ module.exports = {
             .setTitle(`Stop!`)
             .setDescription(`**You need to use the correct channel (<#${message.guild.channels.find(channel => channel.name === "premium-gen").id}>).**`)
             .setColor(0xff0000));
-        if (!message.member.roles.has(message.guild.roles.find(role => role.name === "Premium Gen Access").id)) return message.channel.send(new discord.RichEmbed()
+        if (!message.member.roles.has(message.guild.roles.find(role => role.name === "| Premium Gen Access").id)) return message.channel.send(new discord.RichEmbed()
             .setTitle(`Stop!`)
             .setDescription(`**You need to have the "Premium Gen Access" role.**`)
             .setColor(0xff0000));
